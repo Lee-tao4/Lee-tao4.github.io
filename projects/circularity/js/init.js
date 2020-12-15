@@ -59,22 +59,25 @@ var init = function (window) {
         This Function should check the position of a circle that is passed to the 
         Function. If that circle drifts off the screen, this Function should move
         it to the opposite side of the screen.
-        */
+        */ 
         game.checkCirclePosition = function(circle) {
 
+            
+            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             if (circle.x < 0){
                 circle.x = canvas.width;
             }
-            else if ( circle.x > canvas.width ) {
+            if ( circle.x > canvas.width ) {
                 circle.x = 0;
-            
+                
             }
-            
-            
-            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            else if (circle.y < 0){
-                circle.x = canvas.height
+            if ( circle.y < 0 ){
+                circle.y = canvas.height;
             }
+            if (circle.y > canvass.height){
+                circle.y = 0;
+            }
+
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
